@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<!--Puedes agregar otro nivel de organización en tu documento HTML dentro de las etiquetas
+    html con los elementos head y body. Cualquier código con información sobre tu página 
+    iría dentro de la etiqueta head. Entonces, cualquier código con el contenido de
+    la página (lo que se muestra para un usuario) iría dentro de la etiqueta body.-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Photo App</title>
+</head>
+
+<body>  
+    <!--Para importar una fuente de Google:
+    Puedes copiar la URL de la fuente desde la librería
+    de Google Fonts y luego pegarla en tu código HTML. Para este desafío, importaremos la
+    fuente Lobster. Para ello, copia el siguiente fragmento de código y pégalo en la parte 
+    superior de tu editor de código (antes de abrir el elemento style) 
+    Ahora puedes usar la fuente Lobster en tu CSS usando Lobster como FAMILY_NAME.--> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" 
+    rel="stylesheet"> 
+
+    <style>    
+    /* Dentro de ese bloque de estilo (style):
+    Puedes crear un selector CSS para todos los 
+    elementos h1. Por ejemplo, para que todos los elementos h1 sean de color rojo puedes
+    añadir una regla de estilo como la siguiente: */
+        
+    /* CLASS: 
+    Podemos reutilizar una class dentro de cualquier elemento, class se declara con un
+    (.) al inicio */
+
+        .red-text {
+            /*-COLOR: Para poder cambiar el color de las letras usamos style:"color: ;"*/
+            color:rgb(255, 55, 0);
+        } 
+
+        p { 
+            /*font-size: Controla el tamano de la fuente*/
+            font-size: 16px;
+        } 
+
+        p { 
+            /*font-family: (familia de fuente) establece qué fuente debe usar un elemento. */
+            font-family: monospace;
+        } 
+
+        h1 {  
+            font-family: Lobster, cursive;
+        }  
+        /* -LOS BORDES CSS: 
+            Tienen propiedades como style (estilo), color y width (ancho).*/
+        .thick-green-border{  
+            border-style: solid;
+            border-color: green; 
+            border-width: 10px;  
+            /*border-radius:bordea las esquinas(radio del borde). */
+            border-radius: 30px;
+        }
+        .smaller-image{ 
+            /*width: Controla el ancho de un elemento. Al igual que con las fuentes, 
+            usaremos la unidad de medida px (píxeles) para especificar el ancho de la imagen.*/
+            width: 350px; 
+            /*-Imagenes Circulares: Además de los píxeles, también puedes especificar 
+            el border-radius usando un porcentaje.*/
+            border-radius: 50%;            
+        } 
+        .silver-background{ 
+            /*-Establece el color de fondo de un elemento div: 
+                Puedes establecer el color de fondo de un elemento con la propiedad
+                background-color.*/
+             background-color:silver;
+        }
+        #cat-photo-element{ 
+            /*  ID: Un id no es reutilizable y solo debe aplicarse a un único elemento,
+             para hacer referencia a un id, debes agregar # delante de su nombre.*/
+            background-color: rgb(3, 152, 3);
+        } 
+        [type='checkbox']{
+            margin: 20px 0px 20px 0px;
+        }
+    </style>
+
+    <!--h1,h2:Se utilizan para titulos principales-->
+    <h1 class="red-text">CAT PHOTO APP</h1> 
+
+    <!--main:Ayuda a los motores de busqueda a saber cual es la pagina pricipal-->
+    <main> 
+
+<!--Elemento pharagrap (p): para parrafos.-->
+    <p>This link to 
+
+<!--(href): Es un tributo que se utiliza para hacer referecia a otro documento
+    en nuestro caso nos llevara a otra pagina-->        
+    <a href="https://www.nikon.com.mx/learn-and-explore/a/tips-and-techniques
+    /fotograf%C3%ADa-de-gatos-c%C3%B3mo-capturar-gatos-en-im%C3%A1genes.html">
+    Como fotografiar a tu gato </a> 
+<!--Anchor <a> crea un enlace a otras páginas de internet-->
+    </p>
+
+<!--AGREGAR IMAGENES A TU SITIO WEB: 
+    Puedes agragar imagenes a tu sitio web utilizando el elemento img, y apunar a 
+    la URL de una imagen especifica utilizando el atributo (src), todas las imagenes deben
+    tener un atributo (alt) se muestra si la imagen falla.-->
+    <img class="smaller-image thick-green-border"
+    src="https://image.shutterstock.com/image-photo/cat-medical-mask-protective-antiviral
+    -260nw-1684423789.jpg" 
+    alt="two cats"> 
+ 
+    <!--div: El elemento div, también conocido como elemento de división, 
+    es un contenedor de propósito general para otros elementos.-->
+    <div class="silver-background">
+     <p>Things cats love: </p>
+
+<!--Listas normales-->
+      <ul>
+        <li>cat nip</li>
+        <li>laser pointer</li>
+        <li>lasagna</li>
+      </ul>
+
+<!--Listas con numeracion-->
+    <p>Top 3 things cats hate the most</p>
+      <ol>
+        <li>flea treatmen</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>  
+    </div>
+
+<!--Botones de radio:
+    una sola respuesta con validacion--> 
+<!--CHECKED:
+    Puedes hacer que una casilla de verificación o botón de radio se marque 
+    por defecto usando el atributo checked-->
+
+    <div id="cat-photo-element">
+
+    <label for="indoor">
+        <input id="indoor" type="radio"
+        name="indoor-outdoor" value="indoor" checked> Indoor
+    </label>
+
+    <label for="outdoor">
+        <input id="outdoor" type="radio" 
+        name="indoor-outdoor" value="outdoor"> Outdoor
+    </label>
+    <br>
+    
+<!--Botones con varias respuestas:
+    (checkbox)con validacion-->
+
+    <label for="loving">
+        <input id="loving" type="checkbox" 
+        name="personality" value="loving" checked> Loving
+    </label>
+
+    <label for="lazy">
+        <input id="lazy" type="checkbox" 
+        name="personality" value="lazy"> Lazy
+    </label>
+
+    <label for="energetic">
+        <input id="energetic" type="checkbox" 
+        name="personality" value="energetic"> Energetic
+    </label>
+    <br> 
+<!--<br>: 
+    El elemento <br> produce un salto de linea en el texto-->
+    
+<!--INPUT: 
+    Elemento input para que el usuario pueda interactuar con la pagina
+    y required como requerido-->
+
+    <input type="Text" placeholder="Cat photo URL" required>
+
+<!--Boton-->
+    <button type="submit" >Submit</button>  
+
+    </div>
+     
+</main>
+    
+    
+</body>
+</html>
